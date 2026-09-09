@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizFlow - Sistem Manajemen Inventaris & Pemesanan</title>
+    <!-- Menghubungkan ke External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>BizFlow ERP</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#inventaris">Stok Barang</a></li>
+                <li><a href="#pemesanan">Form Pesanan</a></li>
+                <li><a href="#kontak">Bantuan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="dashboard">
+            <div class="hero-text">
+                <h2>Selamat Datang di BizFlow Portal</h2>
+                <p>Sistem terintegrasi untuk pengelolaan stok barang, pengadaan inventaris, dan pemrosesan pesanan bisnis secara real-time.</p>
+                <p>Akses dokumentasi lengkap di <a href="https://example.com/docs" target="_blank">Panduan Pengguna BizFlow</a>.</p>
+            </div>
+        </section>
+
+        <!-- Fitur Section -->
+        <section>
+            <h2>Fitur Utama Sistem</h2>
+            <ul class="features">
+                <li><strong>Manajemen Stok Otomatis:</strong> Memantau ketersediaan produk secara rinci.</li>
+                <li><strong>Pencatatan Pesanan Instan:</strong> Memudahkan pendaftaran restock dari supplier.</li>
+                <li><strong>Laporan Transparan:</strong> Menyediakan riwayat pengadaan barang yang teratur.</li>
+            </ul>
+        </section>
+
+        <!-- Tabel Inventaris (Minimal 5 Baris Data) -->
+        <section id="inventaris">
+            <h2>Daftar Inventaris Produk</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kode Barang</th>
+                            <th>Nama Produk</th>
+                            <th>Kategori</th>
+                            <th>Stok Tersedia</th>
+                            <th>Harga Satuan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PRD-001</td>
+                            <td>Laptop Business Edition</td>
+                            <td>Elektronik</td>
+                            <td>25 Unit</td>
+                            <td>Rp 12.500.000</td>
+                            <td><span class="status status-ready">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>PRD-002</td>
+                            <td>Ergonomic Office Chair</td>
+                            <td>Furniture</td>
+                            <td>8 Unit</td>
+                            <td>Rp 1.850.000</td>
+                            <td><span class="status status-low">Stok Menipis</span></td>
+                        </tr>
+                        <tr>
+                            <td>PRD-003</td>
+                            <td>Mechanical Keyboard Wireless</td>
+                            <td>Aksesori</td>
+                            <td>45 Unit</td>
+                            <td>Rp 750.000</td>
+                            <td><span class="status status-ready">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>PRD-004</td>
+                            <td>Monitor LED 27 Inch 4K</td>
+                            <td>Elektronik</td>
+                            <td>12 Unit</td>
+                            <td>Rp 4.200.000</td>
+                            <td><span class="status status-ready">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>PRD-005</td>
+                            <td>Meja Kerja Minimalis</td>
+                            <td>Furniture</td>
+                            <td>3 Unit</td>
+                            <td>Rp 2.100.000</td>
+                            <td><span class="status status-low">Stok Menipis</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Form Pemesanan (6 Input Elemen) -->
+        <section id="pemesanan">
+            <h2>Form Pengadaan / Pemesanan Barang Baru</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nama_pemohon">Nama Pemohon / Departemen:</label>
+                    <input type="text" id="nama_pemohon" name="nama_pemohon" placeholder="Contoh: Budi Santoso (Divisi IT)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email_pemohon">Email Konfirmasi:</label>
+                    <input type="email" id="email_pemohon" name="email_pemohon" placeholder="nama@perusahaan.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori_barang">Kategori Produk:</label>
+                    <select id="kategori_barang" name="kategori_barang" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="elektronik">Elektronik & Perangkat Komputer</option>
+                        <option value="furniture">Furniture & Perlengkapan Kantor</option>
+                        <option value="alat_tulis">Alat Tulis & Consumables</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah_item">Jumlah Kuantitas:</label>
+                    <input type="number" id="jumlah_item" name="jumlah_item" min="1" max="500" placeholder="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tgl_dibutuhkan">Tanggal Dibutuhkan:</label>
+                    <input type="date" id="tgl_dibutuhkan" name="tgl_dibutuhkan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="catatan">Catatan / Spesifikasi Khusus:</label>
+                    <textarea id="catatan" name="catatan" placeholder="Tuliskan spesifikasi detail barang yang dibutuhkan..."></textarea>
+                </div>
+
+                <button type="submit">Kirim Permintaan Pesanan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="kontak">
+        <p>&copy; 2026 BizFlow Business Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
